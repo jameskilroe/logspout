@@ -7,9 +7,9 @@ ARG ARCH=amd64
 ARG OS=linux
 ENV GOARCH=${ARCH}
 ENV GOOS=${OS}
-ENV GOPATH=/go
 ENV CGO_ENABLED=0
-RUN go get
+
+RUN go mod download
 RUN go build -ldflags "-X main.Version=$(cat VERSION)-logdna" -o /bin/logspout
 
 
