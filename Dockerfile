@@ -26,4 +26,5 @@ COPY --from=builder /bin/logspout /bin/logspout
 ARG VERSION
 ENV BUILD_VERSION=${VERSION}
 VOLUME /mnt/routes
+EXPOSE 80
 ENTRYPOINT ["/bin/logspout"]
