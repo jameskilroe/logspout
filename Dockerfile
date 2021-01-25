@@ -16,8 +16,7 @@ RUN go mod download
 # Import the code from the context.
 COPY ./ ./
 
-#-ldflags "-X main.Version=$(cat VERSION)-logdna"
-RUN go build -o /bin/logspout 
+RUN go build -ldflags "-X main.Version=$(cat VERSION)-logdna" -o /bin/logspout
 
 
 FROM scratch

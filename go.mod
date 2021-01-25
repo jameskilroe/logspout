@@ -1,6 +1,6 @@
 module github.com/jameskilroe/logspout
 
-go 1.15
+go 1.14
 
 require (
 	github.com/fsouza/go-dockerclient v1.7.0 // indirect
