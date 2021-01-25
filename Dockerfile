@@ -4,7 +4,7 @@ RUN mkdir -p /go/src/github.com/gliderlabs && \
     cp -r /src /go/src/github.com/gliderlabs/logspout
 
 WORKDIR /go/src/github.com/gliderlabs/logspout
-ARG ARCH=amd64
+ARG ARCH=arm64
 ARG OS=linux
 ENV GOARCH=${ARCH}
 ENV GOOS=${OS}
